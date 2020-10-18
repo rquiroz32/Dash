@@ -10,7 +10,7 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <title>Work Day Scheduler</title>
 </head>
@@ -20,11 +20,12 @@
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
+        <button id = "clearCal"class="button">CLEAR CALENDAR</button>
     </header>
     <div class="container">
 
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="9:00am"> 9:00 am
+            <div class="col-sm-2 hour time-block" time="09"> 9:00 am
 
             </div>
             <textarea class="col-sm-9 description">
@@ -36,7 +37,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="10:00am"> 10:00 am
+            <div class="col-sm-2 hour time-block" time="10"> 10:00 am
 
             </div>
             <textarea class="col-sm-9 description">
@@ -47,7 +48,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="11:00am"> 11:00 am
+            <div class="col-sm-2 hour time-block" time="11"> 11:00 am
 
             </div>
             <textarea class="col-sm-9 description">
@@ -58,7 +59,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="12:00am"> 12:00 pm
+            <div class="col-sm-2 hour time-block" time="12"> 12:00 pm
 
             </div>
             <textarea class="col-sm-9 description">
@@ -69,7 +70,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="01:00am"> 01:00 pm
+            <div class="col-sm-2 hour time-block" time="13"> 01:00 pm
 
             </div>
             <textarea class="col-sm-9 description">
@@ -80,7 +81,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="02:00pm"> 02:00 pm
+            <div class="col-sm-2 hour time-block" time="14"> 02:00 pm
 
             </div>
             <textarea class="col-sm-9 description">
@@ -91,7 +92,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="03:00am"> 03:00 pm
+            <div class="col-sm-2 hour time-block" time="15"> 03:00 pm
 
             </div>
             <textarea class="col-sm-9 description">
@@ -102,7 +103,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="04:00pm"> 04:00 pm
+            <div class="col-sm-2 hour time-block" time="16"> 04:00 pm
 
             </div>
             <textarea class="col-sm-9 description">
@@ -113,7 +114,7 @@
             </button>
         </div>
         <div class="row">
-            <div class="col-sm-2 hour time-block" time="05:00pm"> 05:00 pm
+            <div class="col-sm-2 hour time-block" time="17"> 05:00 pm
 
             </div>
             <textarea class="col-sm-9 description">
@@ -124,9 +125,10 @@
             </button>
         </div>
     </div>
-    <script src="./script.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

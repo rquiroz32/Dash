@@ -5,7 +5,6 @@ $(document).ready(function () {
     var currentDay = moment().format("[Today is] dddd, MMMM Do YYYY")
     var currentHour = moment().format('HH')
 
-
     // Update current day element with the current day
     $("#currentDay").text(currentDay);
 
@@ -38,49 +37,37 @@ $(document).ready(function () {
             $(this).addClass("present");
         }
 
-
+        // if there's no locally stored value for the timeblock, don't do anything
         if (locallyStored === null) {
             return
         }
-        
+
+        // there's a value there, empty out whatever is in the text area and overwrite it with the stored value
         else {
             $(this).empty();
             $(this).text(locallyStored)
         }
-    });// closes each function
+    });// closes $.each() function
 
 
 
-    // Click event to save the content of the textarea to local storage
+    // Click event to save the content of the textarea to local storage, using .prev() to refer to the sibling elements to save button
     $(".saveBtn").on("click", function () {
         var locallyStoredEvent = localStorage.getItem($(this).prev().prev().attr('time'))
         var timeBlockText = $(this).prev().val().trim();
-        
-        console.log(locallyStoredEvent)
-        
+
         locallyStoredEvent = JSON.stringify(timeBlockText)
         localStorage.setItem($(this).prev().prev().attr('time'), locallyStoredEvent)
-        
 
-    }) // closes save on click
+    }) // closes save button on click listener
 
-
-
-
-
-
-
-
-
-    // added a clear calendar button for fun
+    // added a clear calendar button and event listener for fun
     $("#clearCal").on("click", function () {
 
         localStorage.clear();
         location.reload();
 
-    })// closes clear on click
-
-
+    })// closes clear button on click listener
 
 
 });// CLOSES THE DOC READY FUNCTION

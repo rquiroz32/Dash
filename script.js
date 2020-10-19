@@ -12,7 +12,7 @@ $(document).ready(function () {
     $(".description").each(function () {
 
         // Grab the value of the time attribute on the prev element to THIS description
-        var timeblockHour = $(this).prev().attr("time")
+        var timeblockHour = $(this).prev().attr("data-time")
         var locallyStored = JSON.parse(localStorage.getItem(timeblockHour))
         console.log(timeblockHour)
 
@@ -53,11 +53,11 @@ $(document).ready(function () {
 
     // Click event to save the content of the textarea to local storage, using .prev() to refer to the sibling elements to save button
     $(".saveBtn").on("click", function () {
-        var locallyStoredEvent = localStorage.getItem($(this).prev().prev().attr('time'))
+        var locallyStoredEvent = localStorage.getItem($(this).prev().prev().attr('data-time'))
         var timeBlockText = $(this).prev().val().trim();
 
         locallyStoredEvent = JSON.stringify(timeBlockText)
-        localStorage.setItem($(this).prev().prev().attr('time'), locallyStoredEvent)
+        localStorage.setItem($(this).prev().prev().attr('data-time'), locallyStoredEvent)
 
     }) // closes save button on click listener
 

@@ -1,7 +1,7 @@
 # Dash
 
 # Description
-This is a HW assignment for my Rutgers Coding Bootcamp. The assignment was to create an application that displays the current day and contextually styles the elements on the page according to the time. If the timeblock is styled with gray, it means it was in the past. If the block was styled with red it's the current hour, and if it's green it's in the future. Then we needed to use local storage to preserve user saved events in the page. 
+This is an application that displays the current day and contextually styles the elements on the page according to the time. If the timeblock is styled with gray, it means it was in the past. If the block was styled with red it's the current hour, and if it's green it's in the future. Then I used local storage to preserve user saved events in the page. 
 
 # Technologies Used:
 - HTML
